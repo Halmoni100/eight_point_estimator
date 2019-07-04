@@ -1,0 +1,3 @@
+[submodule "vslam_utils"]
+	path = vslam_utils
+	url = git@github.com:Halmoni100/vslam_utils.git
