@@ -10,3 +10,9 @@ find_package( OpenCV 4.1.0 REQUIRED )
 
 add_subdirectory( vslam_utils )
 add_subdirectory( tests )
+
+add_library( eightPointEstimator SHARED EightPointEstimator.cpp )
+target_include_directories( eightPointEstimator PRIVATE
+  .
+  ${EIGEN3_INCLUDE_DIR}
+)
