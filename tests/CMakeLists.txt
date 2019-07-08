@@ -1,4 +1,4 @@
-add_library( estimatorFixture EstimatorFixture.cpp )
+add_library( estimatorFixture SHARED EstimatorFixture.cpp )
 target_include_directories( estimatorFixture PRIVATE
   .
   ..
@@ -28,5 +28,7 @@ target_include_directories( checkEstimator PRIVATE
 )
 target_link_libraries( checkEstimator
   estimatorFixture
+  helperFunctions
+  eightPointEstimator
   ${Boost_LIBRARIES}
 )
